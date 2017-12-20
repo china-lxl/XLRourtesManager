@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC65629F1FEA2BD00026A9DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC65629E1FEA2BD00026A9DD /* AppDelegate.m */; };
+		EC6562A51FEA2BD00026A9DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6562A31FEA2BD00026A9DD /* Main.storyboard */; };
+		EC6562A71FEA2BD00026A9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6562A61FEA2BD00026A9DD /* Assets.xcassets */; };
+		EC6562AA1FEA2BD00026A9DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6562A81FEA2BD00026A9DD /* LaunchScreen.storyboard */; };
+		EC6562AD1FEA2BD00026A9DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6562AC1FEA2BD00026A9DD /* main.m */; };
+		EC6562B71FEA2BD00026A9DD /* RouteManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6562B61FEA2BD00026A9DD /* RouteManagerTests.m */; };
+		EC6562C21FEA2BD00026A9DD /* RouteManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6562C11FEA2BD00026A9DD /* RouteManagerUITests.m */; };
+		EC6562D21FEA2D760026A9DD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6562D11FEA2D760026A9DD /* RootViewController.m */; };
+		EC6562D61FEA2DB30026A9DD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6562D41FEA2DB30026A9DD /* MainViewController.m */; };
+		EC6562D71FEA2DB30026A9DD /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6562D51FEA2DB30026A9DD /* MainViewController.xib */; };
+		EC6562DB1FEA2DFA0026A9DD /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6562D91FEA2DFA0026A9DD /* SetViewController.m */; };
+		EC6562DC1FEA2DFA0026A9DD /* SetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6562DA1FEA2DFA0026A9DD /* SetViewController.xib */; };
+		EC6562E01FEA2E2A0026A9DD /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6562DE1FEA2E2A0026A9DD /* ColorViewController.m */; };
+		EC6562E11FEA2E2A0026A9DD /* ColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6562DF1FEA2E2A0026A9DD /* ColorViewController.xib */; };
+		EC6562E51FEA2F900026A9DD /* RoutesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6562E41FEA2F900026A9DD /* RoutesManager.m */; };
+		EC6562E91FEA2FAE0026A9DD /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6562E71FEA2FAE0026A9DD /* WebViewController.m */; };
+		EC6562EA1FEA2FAE0026A9DD /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6562E81FEA2FAE0026A9DD /* WebViewController.xib */; };
+		EC6562ED1FEA30260026A9DD /* NSURL+param.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6562EB1FEA30260026A9DD /* NSURL+param.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC6562B31FEA2BD00026A9DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC6562921FEA2BD00026A9DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC6562991FEA2BD00026A9DD;
+			remoteInfo = RouteManager;
+		};
+		EC6562BE1FEA2BD00026A9DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC6562921FEA2BD00026A9DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC6562991FEA2BD00026A9DD;
+			remoteInfo = RouteManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC65629A1FEA2BD00026A9DD /* RouteManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC65629D1FEA2BD00026A9DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EC65629E1FEA2BD00026A9DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EC6562A41FEA2BD00026A9DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC6562A61FEA2BD00026A9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC6562A91FEA2BD00026A9DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC6562AB1FEA2BD00026A9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC6562AC1FEA2BD00026A9DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC6562B21FEA2BD00026A9DD /* RouteManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouteManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6562B61FEA2BD00026A9DD /* RouteManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouteManagerTests.m; sourceTree = "<group>"; };
+		EC6562B81FEA2BD00026A9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC6562BD1FEA2BD00026A9DD /* RouteManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouteManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6562C11FEA2BD00026A9DD /* RouteManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouteManagerUITests.m; sourceTree = "<group>"; };
+		EC6562C31FEA2BD00026A9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC6562D01FEA2D760026A9DD /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		EC6562D11FEA2D760026A9DD /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		EC6562D31FEA2DB30026A9DD /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EC6562D41FEA2DB30026A9DD /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EC6562D51FEA2DB30026A9DD /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		EC6562D81FEA2DFA0026A9DD /* SetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
+		EC6562D91FEA2DFA0026A9DD /* SetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
+		EC6562DA1FEA2DFA0026A9DD /* SetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetViewController.xib; sourceTree = "<group>"; };
+		EC6562DD1FEA2E2A0026A9DD /* ColorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
+		EC6562DE1FEA2E2A0026A9DD /* ColorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
+		EC6562DF1FEA2E2A0026A9DD /* ColorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorViewController.xib; sourceTree = "<group>"; };
+		EC6562E31FEA2F900026A9DD /* RoutesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesManager.h; sourceTree = "<group>"; };
+		EC6562E41FEA2F900026A9DD /* RoutesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesManager.m; sourceTree = "<group>"; };
+		EC6562E61FEA2FAE0026A9DD /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		EC6562E71FEA2FAE0026A9DD /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		EC6562E81FEA2FAE0026A9DD /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		EC6562EB1FEA30260026A9DD /* NSURL+param.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+param.m"; sourceTree = "<group>"; };
+		EC6562EC1FEA30260026A9DD /* NSURL+param.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+param.h"; sourceTree = "<group>"; };
+		EC6562F41FEA3BFB0026A9DD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC6562971FEA2BD00026A9DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6562AF1FEA2BD00026A9DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6562BA1FEA2BD00026A9DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC6562911FEA2BD00026A9DD = {
+			isa = PBXGroup;
+			children = (
+				EC65629C1FEA2BD00026A9DD /* RouteManager */,
+				EC6562B51FEA2BD00026A9DD /* RouteManagerTests */,
+				EC6562C01FEA2BD00026A9DD /* RouteManagerUITests */,
+				EC65629B1FEA2BD00026A9DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC65629B1FEA2BD00026A9DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC65629A1FEA2BD00026A9DD /* RouteManager.app */,
+				EC6562B21FEA2BD00026A9DD /* RouteManagerTests.xctest */,
+				EC6562BD1FEA2BD00026A9DD /* RouteManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC65629C1FEA2BD00026A9DD /* RouteManager */ = {
+			isa = PBXGroup;
+			children = (
+				EC65629D1FEA2BD00026A9DD /* AppDelegate.h */,
+				EC65629E1FEA2BD00026A9DD /* AppDelegate.m */,
+				EC6562E21FEA2F730026A9DD /* RouteManager */,
+				EC6562CF1FEA2C840026A9DD /* Controller */,
+				EC6562A31FEA2BD00026A9DD /* Main.storyboard */,
+				EC6562F41FEA3BFB0026A9DD /* PrefixHeader.pch */,
+				EC6562A61FEA2BD00026A9DD /* Assets.xcassets */,
+				EC6562A81FEA2BD00026A9DD /* LaunchScreen.storyboard */,
+				EC6562AB1FEA2BD00026A9DD /* Info.plist */,
+				EC6562AC1FEA2BD00026A9DD /* main.m */,
+			);
+			path = RouteManager;
+			sourceTree = "<group>";
+		};
+		EC6562B51FEA2BD00026A9DD /* RouteManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC6562B61FEA2BD00026A9DD /* RouteManagerTests.m */,
+				EC6562B81FEA2BD00026A9DD /* Info.plist */,
+			);
+			path = RouteManagerTests;
+			sourceTree = "<group>";
+		};
+		EC6562C01FEA2BD00026A9DD /* RouteManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC6562C11FEA2BD00026A9DD /* RouteManagerUITests.m */,
+				EC6562C31FEA2BD00026A9DD /* Info.plist */,
+			);
+			path = RouteManagerUITests;
+			sourceTree = "<group>";
+		};
+		EC6562CF1FEA2C840026A9DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC6562D01FEA2D760026A9DD /* RootViewController.h */,
+				EC6562D11FEA2D760026A9DD /* RootViewController.m */,
+				EC6562D31FEA2DB30026A9DD /* MainViewController.h */,
+				EC6562D41FEA2DB30026A9DD /* MainViewController.m */,
+				EC6562D51FEA2DB30026A9DD /* MainViewController.xib */,
+				EC6562D81FEA2DFA0026A9DD /* SetViewController.h */,
+				EC6562D91FEA2DFA0026A9DD /* SetViewController.m */,
+				EC6562DA1FEA2DFA0026A9DD /* SetViewController.xib */,
+				EC6562DD1FEA2E2A0026A9DD /* ColorViewController.h */,
+				EC6562DE1FEA2E2A0026A9DD /* ColorViewController.m */,
+				EC6562DF1FEA2E2A0026A9DD /* ColorViewController.xib */,
+				EC6562E61FEA2FAE0026A9DD /* WebViewController.h */,
+				EC6562E71FEA2FAE0026A9DD /* WebViewController.m */,
+				EC6562E81FEA2FAE0026A9DD /* WebViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EC6562E21FEA2F730026A9DD /* RouteManager */ = {
+			isa = PBXGroup;
+			children = (
+				EC6562E31FEA2F900026A9DD /* RoutesManager.h */,
+				EC6562E41FEA2F900026A9DD /* RoutesManager.m */,
+				EC6562EC1FEA30260026A9DD /* NSURL+param.h */,
+				EC6562EB1FEA30260026A9DD /* NSURL+param.m */,
+			);
+			path = RouteManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC6562991FEA2BD00026A9DD /* RouteManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC6562C61FEA2BD00026A9DD /* Build configuration list for PBXNativeTarget "RouteManager" */;
+			buildPhases = (
+				EC6562961FEA2BD00026A9DD /* Sources */,
+				EC6562971FEA2BD00026A9DD /* Frameworks */,
+				EC6562981FEA2BD00026A9DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RouteManager;
+			productName = RouteManager;
+			productReference = EC65629A1FEA2BD00026A9DD /* RouteManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC6562B11FEA2BD00026A9DD /* RouteManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC6562C91FEA2BD00026A9DD /* Build configuration list for PBXNativeTarget "RouteManagerTests" */;
+			buildPhases = (
+				EC6562AE1FEA2BD00026A9DD /* Sources */,
+				EC6562AF1FEA2BD00026A9DD /* Frameworks */,
+				EC6562B01FEA2BD00026A9DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC6562B41FEA2BD00026A9DD /* PBXTargetDependency */,
+			);
+			name = RouteManagerTests;
+			productName = RouteManagerTests;
+			productReference = EC6562B21FEA2BD00026A9DD /* RouteManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC6562BC1FEA2BD00026A9DD /* RouteManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC6562CC1FEA2BD00026A9DD /* Build configuration list for PBXNativeTarget "RouteManagerUITests" */;
+			buildPhases = (
+				EC6562B91FEA2BD00026A9DD /* Sources */,
+				EC6562BA1FEA2BD00026A9DD /* Frameworks */,
+				EC6562BB1FEA2BD00026A9DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC6562BF1FEA2BD00026A9DD /* PBXTargetDependency */,
+			);
+			name = RouteManagerUITests;
+			productName = RouteManagerUITests;
+			productReference = EC6562BD1FEA2BD00026A9DD /* RouteManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC6562921FEA2BD00026A9DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = lxl;
+				TargetAttributes = {
+					EC6562991FEA2BD00026A9DD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					EC6562B11FEA2BD00026A9DD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EC6562991FEA2BD00026A9DD;
+					};
+					EC6562BC1FEA2BD00026A9DD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EC6562991FEA2BD00026A9DD;
+					};
+				};
+			};
+			buildConfigurationList = EC6562951FEA2BD00026A9DD /* Build configuration list for PBXProject "RouteManager" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC6562911FEA2BD00026A9DD;
+			productRefGroup = EC65629B1FEA2BD00026A9DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC6562991FEA2BD00026A9DD /* RouteManager */,
+				EC6562B11FEA2BD00026A9DD /* RouteManagerTests */,
+				EC6562BC1FEA2BD00026A9DD /* RouteManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC6562981FEA2BD00026A9DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6562AA1FEA2BD00026A9DD /* LaunchScreen.storyboard in Resources */,
+				EC6562DC1FEA2DFA0026A9DD /* SetViewController.xib in Resources */,
+				EC6562E11FEA2E2A0026A9DD /* ColorViewController.xib in Resources */,
+				EC6562EA1FEA2FAE0026A9DD /* WebViewController.xib in Resources */,
+				EC6562A71FEA2BD00026A9DD /* Assets.xcassets in Resources */,
+				EC6562A51FEA2BD00026A9DD /* Main.storyboard in Resources */,
+				EC6562D71FEA2DB30026A9DD /* MainViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6562B01FEA2BD00026A9DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6562BB1FEA2BD00026A9DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC6562961FEA2BD00026A9DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6562AD1FEA2BD00026A9DD /* main.m in Sources */,
+				EC6562ED1FEA30260026A9DD /* NSURL+param.m in Sources */,
+				EC65629F1FEA2BD00026A9DD /* AppDelegate.m in Sources */,
+				EC6562E01FEA2E2A0026A9DD /* ColorViewController.m in Sources */,
+				EC6562E91FEA2FAE0026A9DD /* WebViewController.m in Sources */,
+				EC6562D21FEA2D760026A9DD /* RootViewController.m in Sources */,
+				EC6562DB1FEA2DFA0026A9DD /* SetViewController.m in Sources */,
+				EC6562D61FEA2DB30026A9DD /* MainViewController.m in Sources */,
+				EC6562E51FEA2F900026A9DD /* RoutesManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6562AE1FEA2BD00026A9DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6562B71FEA2BD00026A9DD /* RouteManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6562B91FEA2BD00026A9DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6562C21FEA2BD00026A9DD /* RouteManagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC6562B41FEA2BD00026A9DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC6562991FEA2BD00026A9DD /* RouteManager */;
+			targetProxy = EC6562B31FEA2BD00026A9DD /* PBXContainerItemProxy */;
+		};
+		EC6562BF1FEA2BD00026A9DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC6562991FEA2BD00026A9DD /* RouteManager */;
+			targetProxy = EC6562BE1FEA2BD00026A9DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC6562A31FEA2BD00026A9DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC6562A41FEA2BD00026A9DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC6562A81FEA2BD00026A9DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC6562A91FEA2BD00026A9DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC6562C41FEA2BD00026A9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EC6562C51FEA2BD00026A9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC6562C71FEA2BD00026A9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94YX7MH75N;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RouteManager/PrefixHeader.pch";
+				INFOPLIST_FILE = RouteManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xl.RouteManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC6562C81FEA2BD00026A9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94YX7MH75N;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RouteManager/PrefixHeader.pch";
+				INFOPLIST_FILE = RouteManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xl.RouteManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC6562CA1FEA2BD00026A9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94YX7MH75N;
+				INFOPLIST_FILE = RouteManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xl.RouteManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RouteManager.app/RouteManager";
+			};
+			name = Debug;
+		};
+		EC6562CB1FEA2BD00026A9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94YX7MH75N;
+				INFOPLIST_FILE = RouteManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xl.RouteManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RouteManager.app/RouteManager";
+			};
+			name = Release;
+		};
+		EC6562CD1FEA2BD00026A9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94YX7MH75N;
+				INFOPLIST_FILE = RouteManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xl.RouteManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RouteManager;
+			};
+			name = Debug;
+		};
+		EC6562CE1FEA2BD00026A9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94YX7MH75N;
+				INFOPLIST_FILE = RouteManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xl.RouteManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RouteManager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC6562951FEA2BD00026A9DD /* Build configuration list for PBXProject "RouteManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6562C41FEA2BD00026A9DD /* Debug */,
+				EC6562C51FEA2BD00026A9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC6562C61FEA2BD00026A9DD /* Build configuration list for PBXNativeTarget "RouteManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6562C71FEA2BD00026A9DD /* Debug */,
+				EC6562C81FEA2BD00026A9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC6562C91FEA2BD00026A9DD /* Build configuration list for PBXNativeTarget "RouteManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6562CA1FEA2BD00026A9DD /* Debug */,
+				EC6562CB1FEA2BD00026A9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC6562CC1FEA2BD00026A9DD /* Build configuration list for PBXNativeTarget "RouteManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6562CD1FEA2BD00026A9DD /* Debug */,
+				EC6562CE1FEA2BD00026A9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC6562921FEA2BD00026A9DD /* Project object */;
+}
