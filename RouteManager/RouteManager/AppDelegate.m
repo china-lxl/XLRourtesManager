@@ -16,10 +16,38 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self initRoutes];
+
     // Override point for customization after application launch.
     return YES;
 }
 
+- (void)initRoutes{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"RouteInfo" ofType:@"plist"];
+    [XLRoutesManager defaultRoutesNamesFilePath:path];
+    
+    BOOL isLogin = NO;
+    [[XLRoutesManager instance] registerVaildation:^NSURL *(NSURL *url) {
+        if (!isLogin) {
+            NSLog(@"需要登录权限,这里处理登录逻辑");
+            //处理 去登录的逻辑
+            return nil;
+        }
+        return url;
+    } forKey:@"login"];
+    
+    
+    // 可单独 再次 注册 路由
+    [[XLRoutesManager instance] registerRoute:@"color" className:@"ColorViewController"];
+    [[XLRoutesManager instance] registerRoute:@"greenColor" className:@"ColorViewController" defaultParam:@{@"color":[UIColor greenColor]}];
+    
+    //
+    [[XLRoutesManager instance] registerRoute:@"myset" className:@"ColorViewController" defaultParam:@{@"color":[UIColor orangeColor]} vaildationKeys:@[@"login",@"vip"]];
+    
+    [[XLRoutesManager instance] registerRoute:@"lxlYellowColor" className:@"ColorViewController" defaultParam:nil vaildationKeys:nil intercept:^NSURL *(NSURL *url) {
+        return [NSURL URLWithString:@"lxl://color" param:@{@"color":@"FFFF00"}];
+    }];}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

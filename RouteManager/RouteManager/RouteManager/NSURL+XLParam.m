@@ -1,14 +1,14 @@
 //
-//  NSURL+param.m
+//  NSURL+XLParam.m
 //  RouteManager
 //
 //  Created by lixinglu on 2017/12/20.
 //  Copyright © 2017年 lxl. All rights reserved.
 //
 
-#import "NSURL+param.h"
+#import "NSURL+XLParam.h"
 
-@implementation NSURL (param)
+@implementation NSURL (XLParam)
 
 - (NSDictionary *)queryParam {
     if (!self.query) {
@@ -19,7 +19,7 @@
     for (NSString *string in array) {
         NSArray *p = [string componentsSeparatedByString:@"="];
         if (p.count == 2) {
-            [param setObject:[p[1] stringByRemovingPercentEncoding] forKey:[p[0] stringByRemovingPercentEncoding]];
+            [param setObject:[p[1] decodedString] forKey:[p[0] decodedString]];
         }
     }
     return param;
@@ -36,7 +36,7 @@
     for (NSString *k in param.allKeys) {
         NSString *key = [k description];
         NSString *value = [[param objectForKey:k] description];
-        [string appendFormat:@"%@=%@&", [key stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]], [value stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
+        [string appendFormat:@"%@=%@&", [key encodedString], [value encodedString]];
     }
     if ([string hasSuffix:@"&"]) {
         [string deleteCharactersInRange:NSMakeRange(string.length - 1, 1)];

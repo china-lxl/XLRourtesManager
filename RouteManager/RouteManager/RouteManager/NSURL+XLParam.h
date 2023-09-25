@@ -1,5 +1,5 @@
 //
-//  NSURL+param.h
+//  NSURL+XLParam.h
 //  RouteManager
 //
 //  Created by lixinglu on 2017/12/20.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSURL (param);
+@interface NSURL (XLParam);
 
 - (NSDictionary *)queryParam;
 + (NSURL *)URLWithString:(NSString *)url param:(NSDictionary *)param;

@@ -10,15 +10,24 @@
 
 @interface ColorViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+@property (copy, nonatomic)  NSString *color;
+
+
 @end
 
 @implementation ColorViewController
 
 - (instancetype)initWithParam:(NSDictionary *)param{
-    self = [super initWithParam:param];
+    self = [super init];
     if (self) {
         if ([param valueForKey:@"color"]) {
-            self.view.backgroundColor = [param valueForKey:@"color"];
+            if ([[param valueForKey:@"color"] isKindOfClass:[NSString class]]) {
+                self.color = [param valueForKey:@"color"];
+            }else{
+                self.view.backgroundColor = [param valueForKey:@"color"];
+            }
         }
         if ([param valueForKey:@"title"]) {
             self.title = [param valueForKey:@"title"];
@@ -28,6 +37,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.nameLabel.text = self.color ? :@"-";
     // Do any additional setup after loading the view from its nib.
 }
 

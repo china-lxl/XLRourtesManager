@@ -8,7 +8,7 @@
 
 #import "RootViewController.h"
 
-#import "RoutesManager.h"
+#import "XLRoutesManager.h"
 
 @interface RootViewController ()
 
@@ -22,23 +22,32 @@
 }
 
 - (IBAction)mainCliecked:(id)sender {
-    [[RoutesManager instance] handleOpenURL:[NSURL URLWithString:@"route://main"]];
+    [[XLRoutesManager instance] handleOpenURL:[NSURL URLWithString:@"lxl://main"]];
 }
 
 - (IBAction)setCliecked:(id)sender {
-    [[RoutesManager instance] handleOpenURL:[NSURL URLWithString:@"route://set" param:@{@"title":@"设置来了"}]];
+//    [[XLRoutesManager instance] handleOpenURL:[NSURL URLWithString:@"lxl://set" param:@{@"title":@"设置来了"}]];
+    [[XLRoutesManager instance] handleOpenURL:[NSURL URLWithString:@"lxl://myset" param:@{@"title":@"设置来了"}]];
 }
 - (IBAction)colorCliecked:(id)sender {
-    [[RoutesManager instance] handleOpenURL:[NSURL URLWithString:@"route://color"]];
+    [[XLRoutesManager instance] handleOpenURL:[NSURL URLWithString:@"lxl://color"]];
 }
 - (IBAction)redColorCliecked:(id)sender {
-    [[RoutesManager instance] handleOpenURL:[NSURL URLWithString:@"route://color"] context:@{@"color":[UIColor redColor]}];
+    [[XLRoutesManager instance] handleOpenURL:[NSURL URLWithString:@"lxl://color"] param:@{@"color":[UIColor redColor]}];
 }
 - (IBAction)greenColorCliecked:(id)sender {
-    [[RoutesManager instance] handleOpenURL:[NSURL URLWithString:@"route://color?title=COLOR"]];
+    [[XLRoutesManager instance] handleOpenURL:[NSURL URLWithString:@"lxl://greenColor"]];
 }
 - (IBAction)webCliecked:(id)sender {
-    [[RoutesManager instance] handleOpenURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+    [[XLRoutesManager instance] handleOpenURL:[NSURL URLWithString:@"https://www.baidu.com"]];
+}
+
+- (IBAction)yellowCliecked:(id)sender {
+    [[XLRoutesManager instance] handleOpenURL:[NSURL URLWithString:@"lxl://lxlYellowColor"]];
+}
+
+- (IBAction)innerWebCliecked:(id)sender {
+    [[XLRoutesManager instance] handleOpenURL:[NSURL URLWithString:@"lxl://web"] param:@{@"path":@"https://www.baidu.com"}];
 }
 
 - (void)didReceiveMemoryWarning {

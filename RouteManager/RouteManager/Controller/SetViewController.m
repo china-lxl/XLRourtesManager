@@ -10,19 +10,26 @@
 
 @interface SetViewController ()
 
+@property (copy, nonatomic)  NSString *param1;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
 @end
 
 @implementation SetViewController
 
 - (instancetype)initWithParam:(NSDictionary *)param{
-    self = [super initWithParam:param];
+    self = [super init];
     if (self) {
         self.title = [param valueForKey:@"title"];
+        self.param1 = [param valueForKey:@"param1"];
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.nameLabel.text = self.param1;
     // Do any additional setup after loading the view from its nib.
 }
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>web</key>
+	<string>WebViewController</string>
+	<key>main</key>
+	<string>MainViewController</string>
+	<key>set</key>
+	<dict>
+		<key>param1</key>
+		<string>参数1</string>
+		<key>className</key>
+		<string>SetViewController</string>
+	</dict>
+</dict>
+</plist>

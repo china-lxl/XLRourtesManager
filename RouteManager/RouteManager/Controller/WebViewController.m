@@ -8,27 +8,43 @@
 
 #import "WebViewController.h"
 
-@interface WebViewController ()<UIWebViewDelegate>
+#import <WebKit/WebKit.h>
+
+@interface WebViewController ()<WKNavigationDelegate>
+
+@property(nonatomic, copy) NSString *path;
 
 
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet WKWebView *webView;
+
 
 @end
 
 @implementation WebViewController
+
+- (instancetype)initWithParam:(NSDictionary *)param{
+    self = [super init];
+    if (self) {
+        self.path = [param valueForKey:@"path"];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.title = @"加载中...";
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.targetURL]]];
+    self.webView.navigationDelegate = self;
+    
+    NSURL *url = [NSURL URLWithString:self.path];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
     // Do any additional setup after loading the view from its nib.
 }
 
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-    self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+    self.title = webView.title;
 }
 
 - (void)didReceiveMemoryWarning {
