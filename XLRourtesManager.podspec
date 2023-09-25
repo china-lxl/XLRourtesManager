@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.source       = { :git => "htts@github.com:china-lxl/XLRourtesManager.git", :tag => "0.0.1" }
-  spec.source       = { :git => "htts://github.com/china-lxl/XLRourtesManager.git", :tag => "0.0.1" }
+  spec.source       = { :git => "https://github.com/china-lxl/XLRourtesManager.git", :tag => "0.0.1" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

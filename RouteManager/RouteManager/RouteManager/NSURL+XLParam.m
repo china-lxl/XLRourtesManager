@@ -8,6 +8,9 @@
 
 #import "NSURL+XLParam.h"
 
+#import "NSString+XLEncode.h"
+
+
 @implementation NSURL (XLParam)
 
 - (NSDictionary *)queryParam {
