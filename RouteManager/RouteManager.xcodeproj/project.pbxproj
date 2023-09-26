@@ -35,6 +35,7 @@
 		C5C3623D2AC11D6E007C4211 /* NSURL+XLParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+XLParam.h"; sourceTree = "<group>"; };
 		C5C3623E2AC11D6E007C4211 /* NSURL+XLParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+XLParam.m"; sourceTree = "<group>"; };
 		C5C362412AC125A5007C4211 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C5C3703F2AC25BE6004BA39B /* RoutesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoutesManager.h; sourceTree = "<group>"; };
 		EC65629A1FEA2BD00026A9DD /* RouteManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC65629D1FEA2BD00026A9DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC65629E1FEA2BD00026A9DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -140,6 +141,7 @@
 		EC6562E21FEA2F730026A9DD /* RouteManager */ = {
 			isa = PBXGroup;
 			children = (
+				C5C3703F2AC25BE6004BA39B /* RoutesManager.h */,
 				EC6562E31FEA2F900026A9DD /* XLRoutesManager.h */,
 				EC6562E41FEA2F900026A9DD /* XLRoutesManager.m */,
 				C5C3623D2AC11D6E007C4211 /* NSURL+XLParam.h */,
@@ -310,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -359,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
