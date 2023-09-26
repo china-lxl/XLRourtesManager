@@ -22,7 +22,7 @@
     for (NSString *string in array) {
         NSArray *p = [string componentsSeparatedByString:@"="];
         if (p.count == 2) {
-            [param setObject:[p[1] decodedString] forKey:[p[0] decodedString]];
+            [param setObject:[p[1] stringByRemovingPercentEncoding] forKey:[p[0] stringByRemovingPercentEncoding]];
         }
     }
     return param;
@@ -39,7 +39,7 @@
     for (NSString *k in param.allKeys) {
         NSString *key = [k description];
         NSString *value = [[param objectForKey:k] description];
-        [string appendFormat:@"%@=%@&", [key encodedString], [value encodedString]];
+        [string appendFormat:@"%@=%@&", [key stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]], [value stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
     }
     if ([string hasSuffix:@"&"]) {
         [string deleteCharactersInRange:NSMakeRange(string.length - 1, 1)];
