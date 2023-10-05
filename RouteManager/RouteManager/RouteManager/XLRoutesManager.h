@@ -17,9 +17,8 @@ typedef NSURL *(^vaildationBlock)(NSURL *url);
 
 @interface XLRoutesManager : NSObject
 
-/// 初始化 时候，默认注册的路由 映射关系
-/// - Parameter url: 文件路径地址
-+ (BOOL)defaultRoutesNamesFilePath:(NSString *)path;
+/// 初始化 时候，默认注册的路由 映射关系  以及对应的 scheme
++ (BOOL)defaultRoutesNamesFilePath:(NSString *)path scheme:(NSString *)scheme;
 
 /// 单例
 + (instancetype)instance;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C56B0D882ACE42D200FBB33F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56B0D862ACE42D200FBB33F /* LoginViewController.m */; };
+		C56B0D892ACE42D200FBB33F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C56B0D872ACE42D200FBB33F /* LoginViewController.xib */; };
 		C5C362392AC1181E007C4211 /* RouteInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5C362382AC1181E007C4211 /* RouteInfo.plist */; };
 		C5C3623C2AC11C54007C4211 /* NSString+XLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C3623B2AC11C54007C4211 /* NSString+XLEncode.m */; };
 		C5C3623F2AC11D6E007C4211 /* NSURL+XLParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C3623E2AC11D6E007C4211 /* NSURL+XLParam.m */; };
@@ -29,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C56B0D852ACE42D200FBB33F /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C56B0D862ACE42D200FBB33F /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C56B0D872ACE42D200FBB33F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C5C362382AC1181E007C4211 /* RouteInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RouteInfo.plist; sourceTree = "<group>"; };
 		C5C3623A2AC11C54007C4211 /* NSString+XLEncode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+XLEncode.h"; sourceTree = "<group>"; };
 		C5C3623B2AC11C54007C4211 /* NSString+XLEncode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+XLEncode.m"; sourceTree = "<group>"; };
@@ -121,6 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				EC6562D01FEA2D760026A9DD /* RootViewController.h */,
+				C56B0D852ACE42D200FBB33F /* LoginViewController.h */,
+				C56B0D862ACE42D200FBB33F /* LoginViewController.m */,
+				C56B0D872ACE42D200FBB33F /* LoginViewController.xib */,
 				EC6562D11FEA2D760026A9DD /* RootViewController.m */,
 				EC6562D31FEA2DB30026A9DD /* MainViewController.h */,
 				EC6562D41FEA2DB30026A9DD /* MainViewController.m */,
@@ -219,6 +227,7 @@
 				EC6562A71FEA2BD00026A9DD /* Assets.xcassets in Resources */,
 				EC6562A51FEA2BD00026A9DD /* Main.storyboard in Resources */,
 				EC6562D71FEA2DB30026A9DD /* MainViewController.xib in Resources */,
+				C56B0D892ACE42D200FBB33F /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +247,7 @@
 				EC6562D61FEA2DB30026A9DD /* MainViewController.m in Sources */,
 				C5C3623F2AC11D6E007C4211 /* NSURL+XLParam.m in Sources */,
 				EC6562E51FEA2F900026A9DD /* XLRoutesManager.m in Sources */,
+				C56B0D882ACE42D200FBB33F /* LoginViewController.m in Sources */,
 				C5C3623C2AC11C54007C4211 /* NSString+XLEncode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

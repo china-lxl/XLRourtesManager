@@ -25,14 +25,14 @@
 
 - (void)initRoutes{
     NSString *path = [[NSBundle mainBundle] pathForResource:@"RouteInfo" ofType:@"plist"];
-    [XLRoutesManager defaultRoutesNamesFilePath:path];
+    [XLRoutesManager defaultRoutesNamesFilePath:path scheme:@"lxl"];
     
     BOOL isLogin = NO;
     [[XLRoutesManager instance] registerVaildation:^NSURL *(NSURL *url) {
         if (!isLogin) {
             NSLog(@"需要登录权限,这里处理登录逻辑");
             //处理 去登录的逻辑
-            return nil;
+            return [NSURL URLWithString:@"lxl://Login"];
         }
         return url;
     } forKey:@"login"];

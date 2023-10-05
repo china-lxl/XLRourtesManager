@@ -40,6 +40,9 @@ static XLRoutesManager *_routesManager;
 
 @property (strong, nonatomic)  NSMutableDictionary *vaildations;
 
+@property (copy, nonatomic)  NSString *scheme;
+
+
 @end
 
 @implementation XLRoutesManager
@@ -68,7 +71,7 @@ static XLRoutesManager *_routesManager;
 #pragma mark - 处理跳转的Url
 - (BOOL)canOpenURL:(NSURL *)url{
     BOOL canOpen = NO;
-    if ([url.scheme isEqualToString:@"lxl"]) {
+    if ([url.scheme isEqualToString:self.scheme]) {
         RoutesInfo *info = [self.routes objectForKey:url.host];
         if (info) {
             canOpen = YES;
@@ -95,7 +98,7 @@ static XLRoutesManager *_routesManager;
 #ifdef DEBUG
     NSLog(@"url:%@", url.absoluteString);
 #endif
-    if ([url.scheme isEqualToString:@"lxl"]) {
+    if ([url.scheme isEqualToString:self.scheme]) {
         RoutesInfo *info = [self.routes objectForKey:url.host];
         if (!info) {
             return;
@@ -107,10 +110,17 @@ static XLRoutesManager *_routesManager;
             return;
         }
         NSDictionary *param = [url queryParam];
-        if (info.validations && ![self validationCheckUrl:url param:param withValidation:info.validations]) {
-            return;
+        if (info.validations) {
+            NSString *host = url.host;
+            url = [self validationCheckUrl:url param:param withValidation:info.validations];
+            if (![url.host isEqualToString:host]) {
+                if (url) {
+                    [self handleOpenURL:url param:param model:model fromController:viewContro];
+                }
+                return;
+            }
         }
-        if (info.defaultParam) {
+        if (info.defaultParam && info.defaultParam.count > 0) {
             NSMutableDictionary *temp = [[NSMutableDictionary alloc] initWithCapacity:param.count + info.defaultParam.count];
             if ([context isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *t = (NSDictionary *)context;
@@ -199,14 +209,15 @@ static XLRoutesManager *_routesManager;
     return nav;
 }
 
-- (BOOL)validationCheckUrl:(NSURL *)url param:(NSDictionary *)param withValidation:(NSArray *)validations{
-    __block BOOL limit = YES;
+- (NSURL *)validationCheckUrl:(NSURL *)url param:(NSDictionary *)param withValidation:(NSArray *)validations{
+    __block NSURL *url_new;
     [validations enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         vaildationBlock vaildation = [self.vaildations objectForKey:obj];
         if (vaildation) {
-            NSURL *url_new = vaildation(url);
+            url_new = vaildation(url);
             if (!url_new) {
-                limit = NO;
+                *stop = YES;
+            }else if (![url_new isEqual:url]){
                 *stop = YES;
             }
         }else{
@@ -215,7 +226,7 @@ static XLRoutesManager *_routesManager;
 #endif
         }
     }];
-    return limit;
+    return url_new;
 }
 
 #pragma mark - 注册路由处理
@@ -243,7 +254,7 @@ static XLRoutesManager *_routesManager;
 }
 
 #pragma mark - 初始化 路由映射关系
-+ (BOOL)defaultRoutesNamesFilePath:(NSString *)path{
++ (BOOL)defaultRoutesNamesFilePath:(NSString *)path scheme:(NSString *)scheme{
     if ([[XLRoutesManager instance] routes].allKeys.count > 0) {
 #ifdef DEBUG
         NSLog(@"默认 路由 映射 关系 已存在，无须再次 初始化");
@@ -276,6 +287,8 @@ static XLRoutesManager *_routesManager;
         [routes setObject:info forKey:key];
     }];
     [XLRoutesManager instance].routes = routes;
+    
+    [XLRoutesManager instance].scheme = scheme;
 
     return result;
 }

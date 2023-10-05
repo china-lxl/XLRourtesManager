@@ -6,6 +6,8 @@
 	<string>WebViewController</string>
 	<key>main</key>
 	<string>MainViewController</string>
+	<key>Login</key>
+	<string>LoginViewController</string>
 	<key>set</key>
 	<dict>
 		<key>param1</key>
